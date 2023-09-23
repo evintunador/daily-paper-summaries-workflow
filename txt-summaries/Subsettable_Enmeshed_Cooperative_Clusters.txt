@@ -1,0 +1,29 @@
+
+This paper proposes a meta-organizational structure called Subsettable Enmeshed Cooperative Clusters (SECCs) for Decentralized Autonomous Organizations (DAOs) that aims to bridge the gap between capitalism and socialism. SECCs are designed to be easy to set up, highly customizable, modular, interconnected, and dynamic cooperative organizations that can exist as sub or super-structures to each other. The paper suggests that by utilizing blockchain technology and decentralized information, SECCs can address the flaws of both centrally planned economic systems and free market systems.
+
+The paper begins by discussing the motivation behind the idea, highlighting concerns such as wealth inequality, stagnating median income, decreasing socioeconomic class mobility, and the flaws of both capitalism and socialism. It argues that a new system is needed to facilitate information transfer in government and proposes SECCs as a potential solution.
+
+The background section provides an overview of cooperatives, blockchain technology, smart contracts, and DAOs. It explains that cooperatives are people-centered enterprises owned and run by their members to meet their economic, social, and cultural needs. Blockchain technology is described as a decentralized ledger that uses cryptography to ensure the legitimacy of transactions. Smart contracts are introduced as self-executing contracts that are written on the blockchain and cannot be broken. DAOs are explained as organizations that operate based on smart contracts and are governed by their members.
+
+The core idea of SECCs is illustrated through the examples of two organizations: EvCorp and Best Friends Union. The paper discusses the features of SECCs, including their subsettable nature, the ability to function as clusters, enmeshment of different organizations, and the customizability and fluidity of parameters. It also explores the potential emergent effects of SECCs and the feasibility and conditions for their success.
+
+The paper then addresses the flaws of centrally planned economic systems, such as information inefficiency, lack of innovation, bureaucracy, and corruption, and explains how SECCs can mitigate these issues. It also discusses the flaws of free market systems, including wealth inequality, market failure, negative externalities, boom and bust cycles, unhampered growth, and materialism. The paper argues that SECCs can address these flaws by incorporating cooperative structures, decentralized information, and emergent dynamics.
+
+In the brainstorm section, the paper presents specific details and potential instantiations of SECCs, exploring various possibilities and applications. It also discusses potential issues and limitations, including cultural, legal, mechanical, and technical challenges that may arise in implementing SECCs.
+
+The paper concludes by summarizing the main points and emphasizing the need for open-mindedness and exploration of new economic systems. It acknowledges that SECCs are not a perfect solution but suggests that they have the potential to combine the strengths of capitalism and socialism while addressing their respective flaws.
+
+
+
+
+Prerequisite Knowledge:
+- Understanding of cooperatives and their goals (economics, business)
+- Basic knowledge of blockchain technology and how it works (computer science, cryptography)
+- Familiarity with smart contracts and their advantages (computer science, law)
+- Understanding of decentralized autonomous organizations (DAOs) and their governance (economics, computer science)
+- Knowledge of the flaws of centrally planned economic systems (economics, political science)
+- Understanding of the flaws of free market systems (economics, sociology)
+- Familiarity with concepts such as wealth inequality, market failure, and negative externalities (economics, sociology)
+
+Citation:
+Tunador, Evin. "Subsettable Enmeshed Cooperative Clusters (SECCs): Incorporating Decentralized Information Into Firm Structure." January 2, 2023.

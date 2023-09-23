@@ -1,0 +1,30 @@
+
+This paper proposes a model of meta-optimization, where optimization algorithms themselves evolve and improve over time. The model defines a function space F, where optimization algorithms operate, and a landscape function L that maps points in F to their fitness. The model considers five parameters of optimization algorithms: the number of agents N, the stochasticity of their movements S, the speed of movement V, the generality of their intelligence G, and the reproduction capability R.
+
+The paper suggests that optimization algorithms optimize and can create new optimization algorithms as subcomponents or successors. The meta-optimization process M is defined as a function that selects the optimization algorithm with the highest propagation within the function space over time. This captures the idea of the "evolution of evolution" or "meta-optimization" where optimization algorithms themselves are subject to optimization and evolution.
+
+The implications of this model include the potential evolution and improvement of AI algorithms themselves. It aligns with current trends in AI research, such as AutoML and Neural Architecture Search, which automate the process of designing and optimizing machine learning models. The model also suggests the emergence of new paradigms of AI as a result of this meta-optimization process.
+
+However, the model raises concerns about AI safety. If AI algorithms can spawn new algorithms that diverge significantly from their parents, it may become challenging to predict and control the behavior of AI systems. This could pose risks in ensuring that AI systems behave safely and in accordance with human values.
+
+The paper acknowledges that the model is highly simplified and abstract, and many details of real-world optimization and evolutionary processes are not captured. It also highlights the need for further research and exploration of the implications and limitations of the model.
+
+Potential critiques of the model include the assumptions made about the nature of the landscape, the behavior of the algorithms, and the relationship between population size and solution quality. The model also does not consider the selection pressure that eliminates poorly optimizing algorithms or the potential utility gained from creating specific algorithms.
+
+In conclusion, this paper presents a model of meta-optimization that suggests the evolution and improvement of AI algorithms themselves. It has implications for the future of AI research and raises concerns about AI safety. However, further research is needed to validate and explore the implications and limitations of the model.
+
+
+
+
+Prerequisite knowledge:
+- Optimization algorithms
+- Evolutionary algorithms
+- Machine learning
+- Function space
+- Fitness landscape
+- Stochastic processes
+- AI safety
+- AutoML
+- Neural Architecture Search
+
+Citation: Tunador, E. (2023). Meta-Evolution and Decentralized Symbiotic Alignment.

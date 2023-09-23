@@ -1,0 +1,16 @@
+pypdf2
+pyyaml
+pynput
+time
+os
+datetime
+shutil
+glob
+halo
+openai
+textwrap
+reportlab
+
+
+
+
