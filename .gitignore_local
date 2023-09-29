@@ -1,7 +1,0 @@
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
-*.so
-*.DS_Store
-key_openai.txt
