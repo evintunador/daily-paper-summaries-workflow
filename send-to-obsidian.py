@@ -20,7 +20,7 @@ def process_files(text_folder, pdf_folder, md_final_folder, pdf_final_folder):
             continue
 
         # Convert the text file to a .md file
-        md_file = os.path.join(text_folder, base_filename + '.md')
+        md_file = os.path.join(text_folder, base_filename.proper() + ' (pdf).md')
         with open(text_file, 'r') as f_in, open(md_file, 'w') as f_out:
             # Initiate the file w/ tags and the PDF link
             for line in frontmatter_lines:
