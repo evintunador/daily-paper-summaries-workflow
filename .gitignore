@@ -165,3 +165,5 @@ __pycache__/
 *.so
 *.DS_Store
 key_openai.txt
+chat.py
+input.txt
