@@ -73,7 +73,7 @@ def chatbot(conversation, model="gpt-3.5-turbo-16k", temperature=0):
                 print(f"\n\nExiting due to excessive errors in API: {oops}")
                 exit(1)
             print(f'\n\nRetrying in {2 ** (retry - 1) * 5} seconds...')
-            sleep(2 ** (retry - 1) * 5)
+            sleep(2 ** (retry - 1) * 15)
 
 
 

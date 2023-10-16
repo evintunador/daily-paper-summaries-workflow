@@ -10,7 +10,12 @@ halo
 openai
 textwrap
 reportlab
-
-
+arxiv
+textwrap
+tkinter
+requests
+threading
+opencv-python>=4.8.0.76
+Pillow>=9.4.0
 
 

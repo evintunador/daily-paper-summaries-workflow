@@ -164,6 +164,12 @@ cython_debug/
 __pycache__/
 *.so
 *.DS_Store
+
+
 key_openai.txt
 chat.py
 input.txt
+pdfs-to-summarize/literature-reviews/
+txt-summaries/Cal/
+txt-summaries/Nate-Colin/
+txt-summaries/sammy-ben/

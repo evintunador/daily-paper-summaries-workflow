@@ -1,0 +1,14 @@
+prostate
+medical
+driving
+surgical
+gender
+ethnic
+quantum
+quadrotor
+racist
+racial
+indigenous
+vehicle
+drone
+time series
