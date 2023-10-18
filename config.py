@@ -14,8 +14,8 @@ cleanup = True
 ### send-to-obsidian.py # Irrelevant if you never run send-to-obsidian.py
 # vault_location is wherever you want the .md summaries to go, and attachments_location is wherever you want the pdf files to go
 # For people who use obsidian 'correctly' this might be the exact same folder
-obsidian_vault_location = 'your/obsidian/vault/location/here' #'/Users/tunadorable/Vault'
-obsidian_vault_attachments_location = 'your/obsidian/vault/location/here/attachments-folder' #'/Users/tunadorable/Vault/attachments'
+obsidian_vault_location = '/Users/tunadorable/Vault' #'your/obsidian/vault/location/here'
+obsidian_vault_attachments_location = '/Users/tunadorable/Vault/attachments' #'your/obsidian/vault/location/here/attachments-folder'
 # lines to add to the beginning of each summary.md file in obsidian. I've left mine in as examples
 frontmatter_lines = ['#pdf', '#needsToBeTagged', '#needsAddedToResearchList', '#task read & annotate this full paper', ''] 
 

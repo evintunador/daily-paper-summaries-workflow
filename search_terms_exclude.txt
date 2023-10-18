@@ -12,3 +12,15 @@ indigenous
 vehicle
 drone
 time series
+quadruped
+drought
+hurricane
+flood
+tornado
+glycemic
+eeg
+ultrasound
+fintech
+indonesian
+fake news
+health
