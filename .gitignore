@@ -169,10 +169,11 @@ __pycache__/
 key_openai.txt
 chat.py
 input.txt
-pdfs-to-summarize/literature-reviews/
+pdfs-to-summarize/future-lit-reviews/
 txt-summaries/cal/
 txt-summaries/ben-sammy/
 txt-summaries/learnprompting/
 concatenated-summaries/cal/
 concatenated-summaries/ben-sammy/
 concatenated-summaries/learnprompting/
+yt-description.txt

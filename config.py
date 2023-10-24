@@ -1,5 +1,5 @@
 ### arxiv-search.py
-restrict_to_most_recent = True
+restrict_to_most_recent = False
 max_results = 500
 
 ### generate_multiple_reports.py 

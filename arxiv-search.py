@@ -76,9 +76,10 @@ papers = []
 
 i = 0
 for result in results:
-    if (i == 0) & restrict_to_most_recent:
+    if (i == 0):
         today = result.published.date()
-    elif restrict_to_most_recent & (today != result.published.date()):
+    
+    if restrict_to_most_recent & (today != result.published.date()):
         break
         
     papers.append({"title": result.title, "url": result.pdf_url})
