@@ -37,8 +37,12 @@ def main(video_path, text=default):
 
     font = ImageFont.truetype('arialbd.ttf', 120)
     d = ImageDraw.Draw(text_img)
-    
-    text_w, text_h = d.textsize(text, font=font)
+
+    #text_w, text_h = d.textsize(text, font=font)
+    bbox = d.textbbox((0, 0), text, font=font)  # (left, top, right, bottom)
+    text_w = bbox[2] - bbox[0]
+    text_h = bbox[3] - bbox[1]
+
     position = ((target_dim[0] // 4) - (text_w // 2), (target_dim[1] // 2) - (text_h // 2))
     d.text(position, text, font=font, fill=text_color)
 

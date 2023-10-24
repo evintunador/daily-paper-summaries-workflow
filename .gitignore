@@ -170,6 +170,9 @@ key_openai.txt
 chat.py
 input.txt
 pdfs-to-summarize/literature-reviews/
-txt-summaries/Cal/
-txt-summaries/Nate-Colin/
-txt-summaries/sammy-ben/
+txt-summaries/cal/
+txt-summaries/ben-sammy/
+txt-summaries/learnprompting/
+concatenated-summaries/cal/
+concatenated-summaries/ben-sammy/
+concatenated-summaries/learnprompting/

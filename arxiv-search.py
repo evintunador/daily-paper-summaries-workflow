@@ -1,14 +1,16 @@
 import arxiv
 import time
 import textwrap
-#import datetime as dt
 import tkinter as tk
 from tkinter import ttk
 import requests
 from threading import Thread
 from config import restrict_to_most_recent, max_results
+import os
 
 
+if not os.path.exists("pdfs-to-summarize"):
+    os.makedirs("pdfs-to-summarize")
 
 # Python function to read words from a text file and store each line as a string in a list.
 def read_lines_from_file(filename):

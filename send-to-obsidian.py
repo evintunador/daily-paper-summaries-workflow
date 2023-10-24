@@ -4,6 +4,8 @@ import glob
 
 from config import obsidian_vault_location, obsidian_vault_attachments_location, frontmatter_lines
 
+if not os.path.exists('txt-summaries/send-to-Obsidian'):
+    os.makedirs('txt-summaries/send-to-Obsidian')
 
 def process_files(text_folder, pdf_folder, md_final_folder, pdf_final_folder):
     # Get all text files in the specified folder

@@ -7,6 +7,8 @@ import os
 import PyPDF2
 from config import prompts, cleanup
 
+if not os.path.exists("txt-summaries"):
+    os.makedirs("txt-summaries")
 
 ###     file operations
 

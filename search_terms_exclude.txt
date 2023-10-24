@@ -24,3 +24,5 @@ fintech
 indonesian
 fake news
 health
+parkinson
+cancer

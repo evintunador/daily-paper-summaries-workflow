@@ -4,6 +4,11 @@ from reportlab.lib.pagesizes import letter, landscape
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 
+if not os.path.exists('txt-summaries/to-be-concatenated'):
+    os.makedirs('txt-summaries/to-be-concatenated')
+if not os.path.exists('concatenated-summaries'):
+    os.makedirs('concatenated-summaries')
+
 # Function to convert plain text to PDF
 def text_to_pdf(text_file_path, pdf_file_path):
     # Define the PDF document

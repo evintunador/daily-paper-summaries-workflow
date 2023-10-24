@@ -10,7 +10,7 @@ https://github.com/daveshap/Quickly_Extract_Science_Papers
 
 Another document `arxiv-search.py` is a heavily edited version of https://github.com/bilalazh/Arxiv-Research-Pooler/tree/main
 
-I don't think anybody will really find a majority of these files useful but who knows. The one I've been asked to share is `generate_multiple_prompts.py` which you could find a similar version of on Dave's repo. The only real difference with mine is that I adjusted it to use the longer 16k context window version of GPT-3.5 when that came out. The other file you may find useful is `arxiv-search.py` but it's pretty buggy, something to do with the arxiv api or api wrapper
+I don't think anybody will really find a majority of these files useful but who knows. The one I've been asked to share is `generate_multiple_prompts.py` which you could find a similar version of on Dave's repo. The only real differences with mine is that I adjusted it to use the longer 16k context window version of GPT-3.5 when that came out, and i think my prompts are better. The other file you may find useful is `arxiv-search.py` but it's pretty buggy, something to do with the arxiv api or api wrapper
 
 ## Repo Contents
 
@@ -31,7 +31,7 @@ I don't think anybody will really find a majority of these files useful but who 
 ## SETUP
 
 1. Clone the repository to your local machine.
-2. Install the required Python packages by running `pip install -r requirements.txt` in your terminal. *ngl I have not tested whether I put in all the requirements correctly, nor do i really even understand how a `requirements.txt` document is supposed to work.*
+2. Install the required Python packages by running `pip install -r requirements.txt` in your terminal within your virtual environment
 3. Obtain an API key from OpenAI and save it in a file named `key_openai.txt` in the root directory of the repository.
 4. Run `cleanup.py` to get rid of all the pdf and text files that I may or may not have left in here on the most recent push
 5. If you plan to send files to an Obsidian vault (if you don't know what this means ignore this step and the file `send-to-obsidian.py`) then open `config.py` and define directories for `your/obsidian/vault/location/here` and `your/obsidian/vault/location/here/attachments-folder`. Also inside `config.py` edit `frontmatter_lines` to your liking
