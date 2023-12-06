@@ -26,3 +26,11 @@ fake news
 health
 parkinson
 cancer
+stroke
+IoT
+antibody
+pelvic
+hand
+grasp
+peptide
+amino acid

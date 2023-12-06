@@ -61,7 +61,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Overlay custom image on the first frame of a video.")
     parser.add_argument('video_path', type=str, help='Path to the video file.')
     parser.add_argument('--text', type=str, 
-                        default=f"NEW\nARTIFICIAL\nINTELLIGENCE\nPAPERS\n{now.strftime('%b').upper()} {now.day}\n{now.year}",
+                        default=f"NEW\nARTIFICIAL\nINTELLIGENCE\nPAPERS\n{now.strftime('%b').upper()} {now.day-5}-{now.day}\n{now.year}",
                         help='Alternative title to input. Dont forget to do \ n for new lines')
     
     args = parser.parse_args()

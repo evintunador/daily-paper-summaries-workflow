@@ -1,6 +1,6 @@
 ### arxiv-search.py
-restrict_to_most_recent = False
-max_results = 500
+restrict_to_most_recent = True
+max_results = 1000
 
 ### generate_multiple_reports.py 
 # Mess around with these prompts to tease out specific information you're looking for
@@ -18,6 +18,10 @@ obsidian_vault_location = '/Users/tunadorable/Vault' #'your/obsidian/vault/locat
 obsidian_vault_attachments_location = '/Users/tunadorable/Vault/attachments' #'your/obsidian/vault/location/here/attachments-folder'
 # lines to add to the beginning of each summary.md file in obsidian. I've left mine in as examples
 frontmatter_lines = ['#pdf', '#needsToBeTagged', '#needsAddedToResearchList', '#task read & annotate this full paper', ''] 
+# True if you want the summaries prepended to the pdf itself, false if you only want the summary in the form of a .md note
+# assumes you ran concatenate.py first and that every file in send-to-obsidian is also in concatenate.py
+# i'm too lazy to make this make more sense and i'm prolly gonna forget to include it in the next readme
+prepend_summary = True 
 
 ### timestamps.py
 # True or False

@@ -2,7 +2,7 @@ import os
 import shutil
 import glob
 
-from config import obsidian_vault_location, obsidian_vault_attachments_location, frontmatter_lines
+from config import obsidian_vault_location, obsidian_vault_attachments_location, frontmatter_lines, prepend_summary
 
 if not os.path.exists('txt-summaries/send-to-Obsidian'):
     os.makedirs('txt-summaries/send-to-Obsidian')
@@ -47,7 +47,13 @@ def process_files(text_folder, pdf_folder, md_final_folder, pdf_final_folder):
             print(f"Error: {e}. Skipping file {pdf_file} because it already exists in the Obsidian Vault.")
 
 # Call the function with your specified folders
-process_files('txt-summaries/send-to-Obsidian', 
-              'pdfs-to-summarize', 
-              obsidian_vault_location,
-              obsidian_vault_attachments_location)
+if prepend_summary == True:
+    process_files('txt-summaries/send-to-Obsidian', 
+                    'concatenated-summaries', 
+                    obsidian_vault_location,
+                    obsidian_vault_attachments_location)
+else:
+    process_files('txt-summaries/send-to-Obsidian', 
+                'pdfs-to-summarize', 
+                obsidian_vault_location,
+                obsidian_vault_attachments_location)

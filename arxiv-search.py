@@ -1,5 +1,6 @@
 import arxiv
 import time
+from datetime import datetime, timedelta
 import textwrap
 import tkinter as tk
 from tkinter import ttk
@@ -29,11 +30,27 @@ def read_lines_from_file(filename):
             for line in file:
                 lines.append(line.strip())  # Remove leading/trailing whitespace
     except FileNotFoundError:
-        print("File not found.")
+        print("File not found: {filename}.")
     except Exception as e:
         print(f"An error occurred: {e}")
     
     return lines
+
+
+
+# Most Recent Days Checker. Sometimes arxiv posts papers w multiple dates on one day so we really just want to make sure we're checking whatever came out since we last queried
+with open('most_recent_day_searched.txt', 'r') as file:
+    most_recent = file.read()
+print(most_recent)
+try:
+    most_recent_check = datetime.strptime(most_recent, '%Y-%m-%d').date()
+except ValueError:
+    most_recent_check = datetime.now().date() - timedelta(days=1)
+
+    with open('most_recent_day_searched.txt', 'w') as file:
+            file.write(most_recent_check.strftime('%Y-%m-%d'))
+
+    print("No date listed in most_recent_day_searched.txt. Yesterday's date inserted, but arXiv frequently publishes papers with older dates on a given day (yes it's confusing) so you may want to edit the text file to an even earlier date. If today is a weekend then the script may return nothing.")
 
 
 
@@ -76,19 +93,28 @@ papers = []
 
 i = 0
 for result in results:
+
     if (i == 0):
-        today = result.published.date()
+        new_most_recent = result.published.date().strftime('%Y-%m-%d')
     
-    if restrict_to_most_recent & (today != result.published.date()):
+    if restrict_to_most_recent & (result.published.date() < most_recent_check):
+        # Write new_most_recent to .txt file
+        # we only want to do that here bc if restrict_to_most_recent=False then we don't want to change the value
+        with open('most_recent_day_searched.txt', 'w') as file:
+            file.write(new_most_recent)
+
+        # In case you need to run it back
+        print(f"If you need to run back the most recent check, then edit the date in most_recent_day_searched.txt to be '{most_recent_check}'.")
+
+        # bc we've hit files we likely already downloaded before we'll end here
         break
         
     papers.append({"title": result.title, "url": result.pdf_url})
     print('Title: ', result.title)
+    print('Publishing date ', result.published)
+    print(result.categories)
     print('Abstract: ', textwrap.fill(result.summary, width=220))
-    if not restrict_to_most_recent:
-        print('Publishing date ', result.published)
     print('PDF URL: ', result.pdf_url)
-    #print(result.categories)
     #print('DOI ', result.doi)
     print('\n')
 
