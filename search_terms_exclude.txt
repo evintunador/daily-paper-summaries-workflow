@@ -1,5 +1,4 @@
 prostate
-medical
 driving
 surgical
 gender
@@ -11,7 +10,6 @@ racial
 indigenous
 vehicle
 drone
-time series
 quadruped
 drought
 hurricane
@@ -23,7 +21,6 @@ ultrasound
 fintech
 indonesian
 fake news
-health
 parkinson
 cancer
 stroke

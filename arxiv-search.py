@@ -68,18 +68,23 @@ exclude = exclude[:-9]
 print("\nIncluded Terms:\n", include)
 print("\nExcluded Terms:\n", exclude)
 
+categories = "cat:cs.AI OR cat:stat.ML OR cat:cs.CL OR cat:cs.CV OR cat:cs.LG OR stat.ML OR cs.MA OR cs.NE"
 if len(include_terms) > 0 & len(exclude_terms) > 0:
-    query = f'(cat:cs.AI OR cat:cs.ML OR cat:stat.ML) AND ({include}) ANDNOT ({exclude})'
+    query = f'({categories}) AND ({include}) ANDNOT ({exclude})'
 elif len(include_terms) > 0:
-    query = f'(cat:cs.AI OR cat:cs.ML OR cat:stat.ML) AND ({include})'
+    query = f'({categories}) AND ({include})'
 elif len(exclude_terms) > 0:
-    query = f'(cat:cs.AI OR cat:cs.ML OR cat:stat.ML) ANDNOT ({exclude})'
+    query = f'({categories}) ANDNOT ({exclude})'
 else:
-    query = f'cat:cs.AI OR cat:cs.ML OR cat:stat.ML'
+    query = categories
 print("\nQuery:\n", query)
 
 
-
+client = arxiv.Client(
+  page_size = 1,
+  delay_seconds = 3.0,
+  num_retries = 3
+)
 # Define the search parameters
 search = arxiv.Search(
     query = query,
@@ -88,7 +93,7 @@ search = arxiv.Search(
     sort_order=arxiv.SortOrder.Descending  # In descending order, so the most recent articles come first
 )
 
-results = search.results()
+results = client.results(search)
 papers = []
 
 i = 0

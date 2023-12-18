@@ -17,7 +17,7 @@ default = f"NEW\nARTIFICIAL\nINTELLIGENCE\nPAPERS\n{now.strftime('%b').upper()} 
 def main(video_path, text=default):
     # Capture first frame from video
     cap = cv2.VideoCapture(video_path)
-    cap.set(cv2.CAP_PROP_POS_FRAMES, 499)
+    cap.set(cv2.CAP_PROP_POS_FRAMES, 1)
     ret, frame = cap.read()
     cap.release()
 
