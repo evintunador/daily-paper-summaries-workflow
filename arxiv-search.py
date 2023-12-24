@@ -68,7 +68,7 @@ exclude = exclude[:-9]
 print("\nIncluded Terms:\n", include)
 print("\nExcluded Terms:\n", exclude)
 
-categories = "cat:cs.AI OR cat:stat.ML OR cat:cs.CL OR cat:cs.CV OR cat:cs.LG OR stat.ML OR cs.MA OR cs.NE"
+categories = "cat:cs.AI OR cat:stat.ML OR cat:cs.CL OR cat:cs.CV OR cat:cs.LG OR cat:cs.MA OR cat:cs.NE" # 
 if len(include_terms) > 0 & len(exclude_terms) > 0:
     query = f'({categories}) AND ({include}) ANDNOT ({exclude})'
 elif len(include_terms) > 0:
@@ -82,8 +82,8 @@ print("\nQuery:\n", query)
 
 client = arxiv.Client(
   page_size = 1,
-  delay_seconds = 3.0,
-  num_retries = 3
+  delay_seconds = 5.0,
+  num_retries = 10
 )
 # Define the search parameters
 search = arxiv.Search(
@@ -96,8 +96,21 @@ search = arxiv.Search(
 results = client.results(search)
 papers = []
 
+
+def safe_iterator(iterable):
+    it = iter(iterable)  # Get an iterator object from the iterable
+    while True:
+        try:
+            yield next(it)  # Yield the next item from the iterator
+        except StopIteration:
+            break  # StopIteration means there are no more items
+        except Exception as e:
+            # Handle the exception or simply pass to skip to the next item
+            pass
+
+
 i = 0
-for result in results:
+for result in safe_iterator(results):
 
     if (i == 0):
         new_most_recent = result.published.date().strftime('%Y-%m-%d')
@@ -113,14 +126,18 @@ for result in results:
 
         # bc we've hit files we likely already downloaded before we'll end here
         break
-        
-    papers.append({"title": result.title, "url": result.pdf_url})
-    print('Title: ', result.title)
-    print('Publishing date ', result.published)
-    print(result.categories)
-    print('Abstract: ', textwrap.fill(result.summary, width=220))
-    print('PDF URL: ', result.pdf_url)
-    #print('DOI ', result.doi)
+    
+    try:
+        papers.append({"title": result.title, "url": result.pdf_url})
+        print('Title: ', result.title)
+        print('Publishing date ', result.published)
+        print(result.categories)
+        print('Abstract: ', textwrap.fill(result.summary, width=220))
+        print('PDF URL: ', result.pdf_url)
+        #print('DOI ', result.doi)
+    except UnexpectedEmptyPageError:
+        continue
+    
     print('\n')
 
     # Sleep for 5 seconds to avoid overloading the server
