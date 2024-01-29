@@ -132,7 +132,7 @@ for result in safe_iterator(results):
         print('Title: ', result.title)
         print('Publishing date ', result.published)
         print(result.categories)
-        print('Abstract: ', textwrap.fill(result.summary, width=220))
+        #print('Abstract: ', textwrap.fill(result.summary, width=220))
         print('PDF URL: ', result.pdf_url)
         #print('DOI ', result.doi)
     except UnexpectedEmptyPageError:

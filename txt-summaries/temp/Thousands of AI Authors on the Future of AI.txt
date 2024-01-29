@@ -1,0 +1,24 @@
+This study surveyed 2,778 AI researchers to gather their predictions on the progress and impact of artificial intelligence (AI) systems. The researchers were asked about the feasibility of various AI tasks, the timeline for achieving human-level performance in all tasks and occupations, and their views on the potential risks and benefits of advanced AI.
+`
+The results showed that most AI tasks are predicted to have at least a 50% chance of being feasible within the next ten years. These tasks include coding a payment processing site from scratch, creating songs indistinguishable from those by popular musicians, and fine-tuning large language models. However, there is still uncertainty about the timeline for achieving these milestones, with a wide range of plausible dates.
+
+The survey also found that there is a 10% chance of unaided machines outperforming humans in every possible task by 2027, and a 50% chance by 2047. This estimate is 13 years earlier than a similar survey conducted in 2022. However, the full automation of all human occupations is not expected to reach a 10% chance until 2037, and a 50% chance as late as 2116.
+
+The researchers expressed substantial uncertainty about the long-term value of AI progress. While most researchers believed that good outcomes from superhuman AI are more likely than bad, a significant portion also assigned a non-negligible chance to extremely bad outcomes such as human extinction. Similarly, some researchers who were pessimistic about the overall impact of AI still assigned a non-negligible chance to extremely good outcomes.
+
+There was also disagreement among the researchers about whether faster or slower AI progress would be better for the future of humanity. However, there was broad agreement that research aimed at minimizing potential risks from AI systems should be prioritized.
+
+Overall, this study provides insights into the predictions and perspectives of AI researchers on the future of AI progress and its potential impacts. The results highlight the need for continued research and consideration of the risks and benefits associated with advanced AI systems.
+
+Prerequisite knowledge:
+- Artificial intelligence (AI) concepts and techniques
+- AI research and development
+- AI progress and milestones
+- Probability and statistical analysis
+- Task automation and occupation analysis
+- Framing effects in survey design
+- Risk assessment and mitigation in AI development
+- Interdisciplinary collaboration in AI research
+
+Citation:
+Grace, K., Stewart, H., Sandkühler, J. F., Thomas, S., Weinstein-Raun, B., & Brauner, J. (2024). Thousands of AI Authors on the Future of AI. arXiv preprint arXiv:2401.02843.

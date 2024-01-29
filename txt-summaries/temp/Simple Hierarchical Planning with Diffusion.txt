@@ -1,0 +1,17 @@
+This paper introduces a hierarchical planning framework called Hierarchical Diffuser (HD) that combines the benefits of hierarchical and diffusion-based planning. The authors propose a two-level model consisting of a high-level planner and a low-level planner. The high-level planner generates subgoals, while the low-level planner refines the high-level plan by generating dense trajectories between subgoals. The model is trained using a diffusion probabilistic model and a guidance function. 
+`
+The authors evaluate HD on long-horizon tasks, specifically Maze2D and AntMaze, and compare its performance to other state-of-the-art methods. The results show that HD outperforms previous methods, demonstrating the effectiveness of hierarchical planning. HD also shows improved generalization capabilities on compositional out-of-distribution tasks. 
+
+One potential critique of HD is that it requires defining subgoals at fixed intervals, which may not always be optimal. Additionally, the model's performance may be sensitive to the choice of hyperparameters, such as the value of K (the interval for subgoals). 
+
+The implications of this work are that hierarchical planning can improve the performance of diffusion-based planning methods, especially for long-horizon tasks. HD provides a simple and efficient framework for incorporating hierarchical planning into diffusion models, leading to better planning speed and generalization capabilities. This work contributes to the field of model-based reinforcement learning and highlights the importance of combining different planning strategies for improved performance.
+
+- Diffusion probabilistic models
+- Model-based planning in reinforcement learning
+- Hierarchical planning in reinforcement learning
+- Trajectory optimization
+- Reinforcement learning benchmarks (D4RL)
+- Long-horizon tasks in reinforcement learning
+- State-of-the-art methods in model-based reinforcement learning
+
+Citation: Chen, C., Deng, F., Kawaguchi, K., Gulcehre, C., & Ahn, S. (2024). Simple Hierarchical Planning with Diffusion. arXiv preprint arXiv:2401.02644.

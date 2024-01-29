@@ -1,0 +1,26 @@
+In this paper, the author explores the concept of the defensible set in social choice theory, which refers to the set of alternatives that can be defended against overthrow based on majority comparisons. The author shows that any voting method that satisfies positive involvement (where an alternative cannot lose by ranking it first) and the Condorcet winner criterion (where the winner beats every other alternative head-to-head) reﬁnes the defensible set. 
+`
+The author then introduces additional axioms, including the Condorcet loser criterion (where an alternative loses to every other alternative) and resolvability (where ties can be broken by adding voters), and investigates whether there exists a voting method that satisfies all these axioms along with relative margin invariance (where the choice of winners depends only on the relative sizes of majority margins). The author proves an impossibility theorem, showing that there is no such voting method.
+
+The implications of this theorem are that it is not possible to design a voting method that satisfies all the desirable axioms mentioned above. This result challenges the search for an ideal voting method that is robust, fair, and consistent. The defensible set is shown to be a useful concept in understanding the limitations of voting methods and can guide the development of new methods that satisfy a subset of the axioms.
+
+One potential critique of this work is that it focuses on ordinal preferences and may not capture all the complexities and nuances of real-world voting scenarios. Additionally, the specific axioms chosen may not fully capture all the desirable properties of a voting method, and there may be other axioms that could be considered. Further research is needed to explore alternative axioms and their implications for voting methods.
+
+Prerequisite knowledge:
+- Social choice theory
+- Ordinal preferences
+- Majority comparisons
+- Condorcet winner criterion
+- Condorcet loser criterion
+- Resolvability
+- Relative margin invariance
+
+Disciplines and sub-disciplines:
+- Economics (social choice theory)
+- Mathematics (ordinal preferences, majority comparisons)
+- Political science (voting methods)
+- Game theory (social choice, preferences)
+- Decision theory (voting methods, preferences)
+
+Citation:
+Holliday, W. H. (2024). The defensible set and a new impossibility theorem in voting. arXiv preprint arXiv:2401.05657v1.

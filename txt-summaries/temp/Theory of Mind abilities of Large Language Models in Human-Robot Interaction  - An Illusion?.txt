@@ -1,0 +1,21 @@
+This paper investigates the Theory of Mind (ToM) abilities of Large Language Models (LLMs) in the context of Human-Robot Interaction (HRI). The authors focus on the task of Perceived Behavior Recognition, where a robot uses an LLM to assess its own behavior from the perspective of a human observer. The goal is to determine whether the LLM can accurately predict how a human would perceive the robot's behavior.
+`
+To evaluate the ToM abilities of LLMs, the authors conduct a human subject study. They curate a set of situations across five domains and four behavior types (explicability, legibility, predictability, and obfuscation) that are relevant to HRI. Each situation is presented as a prompt to the LLM, which is then asked a binary question about whether the human observer would find the behavior explicable (or the corresponding behavior type). The LLM is also asked to provide an explanation for its answer.
+
+The results of the human subject study show that lay users are able to correctly answer the ToM questions in the curated situations, indicating that the situations are valid and understandable. However, when comparing the LLM's performance to that of the human participants, the authors find that the LLM's responses do not align well with the human responses. This suggests that the LLM's ToM abilities may be limited or unreliable.
+
+To further test the robustness of LLMs in their perceived mental-model reasoning abilities, the authors propose three perturbation tests. The first test introduces an uninformative context to the prompts, while the second test introduces inconsistent beliefs. The results of these tests show that LLMs are extremely brittle and fail to maintain their ToM abilities when faced with perturbations in the context.
+
+Overall, the findings of this study suggest that while LLMs may show some potential for ToM abilities in HRI, their performance is limited and unreliable. The authors conclude that LLMs lack the robustness and invariance required for true ToM abilities. These findings have important implications for the use of LLMs in HRI and highlight the need for further research in this area.
+
+- Theory of Mind (ToM)
+- Large Language Models (LLMs)
+- Human-Robot Interaction (HRI)
+- Behavior synthesis
+- Explicability, legibility, predictability, and obfuscation (behavior types)
+- Natural Language Processing (NLP)
+- Artificial Intelligence (AI)
+- Generative models
+- Cognitive development studies
+
+Citation: Verma, M., Bhambri, S., & Kambhampati, S. (2024). Theory of Mind abilities of Large Language Models in Human-Robot Interaction: An Illusion? arXiv preprint arXiv:2401.05302.

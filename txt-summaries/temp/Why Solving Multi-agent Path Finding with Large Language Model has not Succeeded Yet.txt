@@ -1,0 +1,22 @@
+In this paper, the authors investigate the use of large language models (LLMs) to solve the multi-agent path finding (MAPF) problem. MAPF involves finding collision-free paths for multiple agents in a given environment. The authors propose a framework where an LLM is directly used to generate actions for each agent at each timestep. They also incorporate a high-level conflict checker to ensure the generated solution is valid.
+`
+The authors conduct experiments on the MAPF benchmark, specifically focusing on scenarios with an empty map and a room map with obstacles. They find that LLMs can successfully solve MAPF problems on the empty map, but fail to generate valid solutions on the room map, even with a small number of agents.
+
+Based on their observations, the authors identify three reasons for the failures of LLMs in solving MAPF. The first reason is the limitation of the model's capacity when the context length is long. The second reason is the lack of reasoning capability, particularly in complex scenarios that require path finding in complex environments. The third reason is the difficulty in understanding the concept of makespan and optimizing solutions for it.
+
+The results of the experiments suggest that LLMs currently lack the capability to effectively solve MAPF problems, especially in scenarios with obstacles. The authors highlight the need for further research to address these limitations and develop more effective approaches for using LLMs in MAPF.
+
+One potential critique of the study is the reliance on a specific LLM model (GPT-4) and the assumption that future LLM models will have similar limitations. It is possible that future advancements in LLMs could overcome the identified challenges and improve their performance in MAPF.
+
+The implications of this research are twofold. Firstly, it highlights the current limitations of LLMs in solving complex multi-agent planning problems like MAPF. Secondly, it provides insights into the specific challenges faced in using LLMs for MAPF, which can guide future research in developing more effective approaches for solving MAPF with LLMs.
+
+- Multi-agent path finding (MAPF) problem
+- Large language models (LLMs)
+- Path planning algorithms
+- Reinforcement learning
+- Markov decision processes
+- Natural language processing
+- Artificial intelligence
+- Computer science
+
+Citation: Chen, W., Koenig, S., & Dilkina, B. (2024). Why Solving Multi-agent Path Finding with Large Language Model has not Succeeded Yet. arXiv preprint arXiv:2401.03630.

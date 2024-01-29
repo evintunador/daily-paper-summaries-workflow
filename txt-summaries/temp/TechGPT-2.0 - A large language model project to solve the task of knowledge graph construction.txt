@@ -1,0 +1,31 @@
+The TechGPT-2.0 project aims to enhance large language models' capabilities in knowledge graph construction tasks, such as named entity recognition (NER) and relationship triple extraction (RTE) in natural language processing (NLP) applications. The project provides two 7B-scale models and a QLoRA model specialized for processing lengthy texts. These models are trained on Huawei's Ascend server and inherit all functionalities from TechGPT-1.0, with additional enhancements in various domains such as medicine, law, geography, transportation, organizations, biology, natural sciences, astronomy, and architecture.
+`
+The project follows the instruction tuning paradigm, where the models are first pre-trained on large-scale unlabeled text corpora and then fine-tuned on specific datasets for the knowledge graph construction tasks. The fine-tuning process involves training all parameters or a subset of parameters, depending on the approach used. The TechGPT-2.0 project explores different models and selects the LLAMA2 and ChatGLM models as the base models for fine-tuning. The models are fine-tuned using a combination of general instruction data and domain-specific knowledge graph data.
+
+The data collection process involves curating batches of knowledge graphs from open-source and research data sources. These graphs are then manually annotated and modified to align with the instruction fine-tuning data format. The dataset for instruction fine-tuning consists of approximately 4 million instances, combining general instruction data and domain-specific knowledge graph data.
+
+The project also shares insights into debugging experiences with the Ascend server and provides guidance for researchers interested in training large-scale language models on this platform. The model training experiences highlight the influence of data on training and propose solutions to challenges associated with processing long texts.
+
+The core assertions of the TechGPT-2.0 project are:
+
+1. Large language models can be enhanced for knowledge graph construction tasks through instruction fine-tuning.
+2. The Ascend server is a suitable platform for training large-scale language models.
+3. The TechGPT-2.0 models exhibit improved capabilities in various domains and can handle hallucinations, unanswerable queries, and lengthy texts.
+4. The data collection and processing methods used in the project enable the construction of high-quality instruction fine-tuning datasets.
+
+The mechanics of the project involve selecting base models, fine-tuning them using a combination of general instruction data and domain-specific knowledge graph data, and evaluating their performance on NER and RTE tasks. The project also provides insights into debugging the Ascend server and training the models effectively.
+
+The results of the project indicate that the TechGPT-2.0 models show improved performance in knowledge graph construction tasks compared to the base models. However, detailed experimental results are not provided in the report, and researchers are encouraged to explore the models themselves through open-source communities.
+
+Potential critiques of the project include the limited experimental evaluation provided in the report and the lack of detailed comparisons with other state-of-the-art models. Additionally, the report focuses on the technical aspects of the project and does not discuss potential ethical considerations or societal implications of large language models.
+
+The implications of the TechGPT-2.0 project are that large language models can be further enhanced for knowledge graph construction tasks, opening up possibilities for improved NLP applications in various domains. The project also provides valuable insights and guidance for researchers interested in training large-scale language models on the Ascend server.
+
+- Knowledge of natural language processing (NLP) concepts and tasks
+- Familiarity with large language models (LLMs) and their pre-training and fine-tuning processes
+- Understanding of knowledge graphs and their construction
+- Knowledge of named entity recognition (NER) and relationship triple extraction (RTE) tasks
+- Familiarity with the Transformer model architecture
+- Understanding of debugging processes for server platforms like Huawei's Ascend server
+
+Citation: Wang, J., Chang, Y., Li, Z., An, N., Ma, Q., Hei, L., Luo, H., Lu, Y., & Ren, F. (2024). TechGPT-2.0: A large language model project to solve the task of knowledge graph construction. arXiv preprint arXiv:2401.04507.

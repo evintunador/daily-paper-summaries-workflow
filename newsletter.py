@@ -83,8 +83,8 @@ def chat_print(text):
 openai.api_key = open_file('key_openai.txt').strip()
 
 paper = open_file(f'concat_summaries.txt').strip()
-if len(paper) > 88000:
-    paper = paper[0:88000]
+if len(paper) > 80000:
+    paper = paper[0:80000]
 
 ALL_MESSAGES = [{'role':'system', 'content': paper}]
 report = ''

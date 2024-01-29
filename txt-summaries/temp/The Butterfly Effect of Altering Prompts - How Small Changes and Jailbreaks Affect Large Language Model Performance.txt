@@ -1,0 +1,17 @@
+In this study, the researchers investigated how variations in the prompts given to large language models (LLMs) affect their performance. They explored three types of prompt variations: output formats, perturbations, and jailbreaks. The researchers conducted experiments on 11 text classification tasks using OpenAI's ChatGPT model.
+`
+The results showed that even small changes in the prompt can cause the LLM to change its answer. For example, adding a space at the beginning or end of the prompt, or rephrasing the prompt as a statement, led to a significant number of prediction changes. Similarly, requesting responses in different output formats, such as JSON, CSV, or XML, also affected the model's predictions.
+
+The researchers also examined the impact of jailbreaks, which are used to bypass content filters when dealing with sensitive topics. They found that jailbreaks like AIM and Dev Mode V2 resulted in a large number of invalid responses, while Evil Confidant and Refusal Suppression led to a significant decrease in accuracy.
+
+Furthermore, the researchers analyzed the similarity of predictions across different prompt variations. They used multidimensional scaling to represent the prompt variations in a low-dimensional space. The results showed that prompts with similar semantics, such as Python List and No Specified Format, clustered together, while variations like JSON Checkbox and End with "Thank you" were outliers.
+
+Overall, this study highlights the sensitivity of LLMs to prompt variations and the potential impact on their performance. It suggests that practitioners should carefully consider the wording, formatting, and jailbreaks used in their prompts to obtain reliable and accurate results from LLMs.
+
+Prerequisite knowledge:
+- Familiarity with large language models (LLMs) and their applications
+- Understanding of text classification tasks and evaluation metrics
+- Knowledge of prompt generation and its impact on LLM performance
+
+Citation:
+Salinas, A., & Morstatter, F. (2024). The Butterfly Effect of Altering Prompts: How Small Changes and Jailbreaks Affect Large Language Model Performance. arXiv preprint arXiv:2401.03729.
