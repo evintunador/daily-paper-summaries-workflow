@@ -169,16 +169,9 @@ __pycache__/
 key_openai.txt
 chat.py
 input.txt
-pdfs-to-summarize/future-lit-reviews/
-pdfs-to-summarize/LearnPrompting/
-pdfs-to-summarize/consulting/
 txt-summaries/cal/
 txt-summaries/ben-sammy/
 txt-summaries/learnprompting/
-concatenated-summaries/cal/
-concatenated-summaries/ben-sammy/
-concatenated-summaries/learnprompting/
 yt-description.txt
-txt-summaries/temp/
 pdfs-to-summarize/
 concatenated-summaries/
