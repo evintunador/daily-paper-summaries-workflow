@@ -2,7 +2,7 @@
 
 ## EXECUTIVE SUMMARY
 
-This repo is public access to what I use for my youtube video daily AI paper breakdowns. 
+This repo is public access to what I use for my youtube video weekly AI paper breakdowns. 
 https://youtube.com/playlist?list=PLPefVKO3tDxP7iFzaSOkOZnXQ4Bkhi9YB&si=J0Rmcmy-oVyAZI7I
 
 One document `generate_multiple_reports.py` originates from one of David Shapiro's repos; the edits I've made to it are relatively minor
@@ -10,23 +10,24 @@ https://github.com/daveshap/Quickly_Extract_Science_Papers
 
 Another document `arxiv-search.py` is a heavily edited version of https://github.com/bilalazh/Arxiv-Research-Pooler/tree/main
 
-I don't think anybody will really find a majority of these files useful but who knows. The one I've been asked to share is `generate_multiple_prompts.py` which you could find a similar version of on Dave's repo. The only real differences with mine is that I adjusted it to use the longer 16k context window version of GPT-3.5 when that came out, and i think my prompts are better. The other file you may find useful is `arxiv-search.py` but it's pretty buggy, something to do with the arxiv api or api wrapper
+I don't think anybody will really find a majority of these files useful but who knows. The one I've been asked to share is `generate_multiple_prompts.py` which you could find a similar version of on Dave's repo. The only real differences with mine is that 1: I adjusted it to use the longer 16k context window version of GPT-3.5 when that came out, 2: i updated it to the newest OpenAI API syntax, and 3: i think my prompts are better. The other file you may find useful is `arxiv-search.py` but it's pretty buggy, something to do with the arxiv api or api wrapper
 
 ## Repo Contents
 
 - `arxiv-search.py` - this script downloads papers from arXiv.org according to search criteria specified in `search_terms_include.txt` and `search_terms_exclude.txt`. It assumes by default that you only want the most recent day of papers; to change this set `restrict_to_most_recent = False` inside `config.py`. 
-    - sometimes this just won't work, in which case i'd recommend running it again. Something to do with either the arXiv API or the API wrapper not responding. Really not a big deal just run it a few times and one of them will work
-    - `BUG` - the buttons are frequently unresponsive. I have to jump around a few windows back & forth to get it to work very frequently. Generally once it does start working I just don't leave that window. If anyone knows why `tkinter` does this pls lmk, but honeslty it's such a non-issue and I'm so tired that I'm not even gonna look it up. Likely will get fixed in future.
+    - sometimes this just won't work, in which case i'd recommend running it again a few minutes later. Something to do with either the arXiv API not responding. Really not a big deal just run it a few times and one of them will work
+    - `BUG` - the buttons are frequently unresponsive. I have to jump around a few windows back & forth to get it to work very frequently. Generally once it does start working I just don't leave that window. Alternatively if you just mash the button you're trying to click eventually it'll work. If anyone knows why `tkinter` does this pls lmk, but honeslty it's such a non-issue and I'm so tired that I'm not even gonna look it up. Likely will get fixed in future.
 - `generate_multiple_reports.py` - this will consume all PDFs in the `pdfs-to-summarize/` folder and use OpenAI's API to generate summaries in the `txt-summaries/` folder. This is helpful for bulk processing such as for literature reviews. 
 - `concatenate.py` - this will turn all txt summary files that have been copy & pasted from `txt-summaries/` to `txt-summaries/to-be-concatenated` into pdfs that I think are super useful for sharing. Basically it prepends the summary to the beginning of the original pdf. I often want to share scientific articles with friends but they usually don't want to read the whole thing, so giving them a version with a summary in the beginning is super useful.
 - `send-to-obsidian.py` - this will take any txt files that have been copy & pasted from `txt-summaries/` to `txt-summaries/send-to-Obsidian` and send them and their pdf versions into your obsidian vault. You need to specify the location of your obsidian vault in `config.py` in order for it to work.
-- `newsletter.py` - creates the actual newsletter that I publish daily to https://evintunador.substack.com?utm_source=navbar&utm_medium=web&r=1ixdk1 by concatenating all the summaries, and then having the chatGPT API do a little meta-summary intro to the newsletter. Saves to `newsletter.txt` which is what I copy & paste into substack
+- `newsletter.py` - creates the actual newsletter that I publish weekly to https://evintunador.substack.com?utm_source=navbar&utm_medium=web&r=1ixdk1 by concatenating all the summaries, and then having the chatGPT API do a little meta-summary intro to the newsletter. Saves to `newsletter.txt` which is what I copy & paste into substack
 - `timestamps.py` - a script that generates youtube chapter timestamps based on the pdfs that have been summarized. Hit a configurable hotkey to (I use \`) to indicate that a new yt chapter should start, and `esc` to end the script. Creates `timestamps.txt` which is what I copy & paste into my yt description.
 - `daily-thumbnail.py` - creates a simple thumbnail for my YT videos after they've been recorded. Basically a screenshot is taken from the video then the right half of the screen gets overlayed with a random color and either black or white text is written on that random color. By default the text says "New AI Papers Published MMM DD YYYY" but you can change this by calling it like in the example below.
     `python daily-thumbnail.py "path/to/video.mov" --text "Alternative\nTitle of\nYour Choice"`
 ![image failed to load](./output_image.jpg)
-- `cleanup.py` - Deletes all of the files that are generated by all the other scripts. I'd recommend running this after you download the repo since I've left it populated with a bunch of example txt and pdf files for example purposes
+- `cleanup.py` - Deletes all of the files that are generated by all the other scripts. I'd recommend running this after you download the repo since I may have left it populated with a bunch of files on my last push by accident
 - `config.py` - Where you can change a couple settings if you'd like. 
+- `podcast.py` - takes the beginning of Newsletter.txt and creates a simple podcast using OpenAI's TTS model. `WARNING` currently the actual `newsletter.txt` file is too long for a podcast given the 4096 character limit of OpenAI's TTS model and i'm too lazy to make it iterable and read the entire thing. As such, `podcast.py` is designed to only use the text in the intro super-summary of my newsletter rather than the entire thing, and the trigger separation word is "Tunadorable"
 
 ## SETUP
 

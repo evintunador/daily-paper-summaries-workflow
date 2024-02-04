@@ -44,4 +44,8 @@ try:
 except Exception as e:
     print(f"Couldn't delete concat_summaries.txt bc Error occurred: \n{e}")
 
-
+try:
+    if os.path.isfile('newsletter_podcast.mp3'):
+        os.remove('newsletter_podcast.mp3')
+except Exception as e:
+    print(f"Couldn't delete newsletter_podcast.mp3 bc Error occurred: \n{e}")

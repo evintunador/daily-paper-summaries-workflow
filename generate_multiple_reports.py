@@ -1,4 +1,4 @@
-import openai
+from openai import OpenAI
 from time import time, sleep
 from halo import Halo
 import textwrap
@@ -50,7 +50,7 @@ def cleanup_file(filepath):
 
 ###     API functions
 
-def chatbot(conversation, model="gpt-3.5-turbo-16k", temperature=0):
+def chatbot(conversation, model="gpt-3.5-turbo-16k", temperature=0.7):
     max_retry = 3
     retry = 0
     while True:
@@ -58,12 +58,12 @@ def chatbot(conversation, model="gpt-3.5-turbo-16k", temperature=0):
             spinner = Halo(text='Thinking...', spinner='dots')
             spinner.start()
             
-            response = openai.ChatCompletion.create(model=model, messages=conversation, temperature=temperature)
-            text = response['choices'][0]['message']['content']
+            response = client.chat.completions.create(model=model, messages=conversation, temperature=temperature)
+            text = response.choices[0].message.content
 
             spinner.stop()
             
-            return text, response['usage']['total_tokens']
+            return text#, response['usage']['total_tokens']
         except Exception as oops:
             print(f'\n\nError communicating with OpenAI: "{oops}"')
             if 'maximum context length' in str(oops):
@@ -89,7 +89,8 @@ def chat_print(text):
 
 if __name__ == '__main__':
     # instantiate chatbot, variables
-    openai.api_key = open_file('key_openai.txt').strip()
+    SECRET_KEY = open_file('key_openai.txt').strip()
+    client = OpenAI(api_key=SECRET_KEY)
 
     # Get list of all PDF files in the input folder
     pdf_files = [f for f in os.listdir('pdfs-to-summarize/') if f.endswith('.pdf')]
@@ -119,7 +120,7 @@ if __name__ == '__main__':
         report = ''
         for p in prompts:
             ALL_MESSAGES.append({'role':'user', 'content': p})
-            response, tokens = chatbot(ALL_MESSAGES)
+            response = chatbot(ALL_MESSAGES)#, tokens
             chat_print(response)
             ALL_MESSAGES.append({'role':'assistant', 'content': response})
             report += '\n\nQ: %s\nA: %s' % (p, response)
